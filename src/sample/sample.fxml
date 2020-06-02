@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="693.0" prefWidth="1169.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <children>
+        <Button fx:id="btn" layoutX="1067.0" layoutY="4.0" mnemonicParsing="false" onAction="#click" prefHeight="18.0" prefWidth="88.0" text="Veri Getir" />
+        <TextField fx:id="textfield" layoutX="11.0" layoutY="4.0" prefHeight="25.0" prefWidth="1045.0" />
+        <TableView fx:id="tableView" layoutX="14.0" layoutY="33.0" prefHeight="100.0" prefWidth="1147.0">
+            <columns>
+                <TableColumn fx:id="countriesAndTerritories" prefWidth="98.0" text="Country" />
+                <TableColumn fx:id="cases" prefWidth="93.99998474121094" text="Total Case" />
+                <TableColumn fx:id="New_Case" text="New Case" />
+                <TableColumn fx:id="Total_Deaths" prefWidth="90.0" text="Total Deaths" />
+                <TableColumn fx:id="New_Deaths" prefWidth="128.0" text="New Deaths" />
+                <TableColumn fx:id="Mortality" prefWidth="117.0" text="Mortality" />
+                <TableColumn fx:id="Attack_Rate" prefWidth="93.0" text="Attack Rate" />
+                <TableColumn fx:id="Pop_Data2018" prefWidth="122.0" text="Population" />
+            </columns>
+        </TableView>
+        <Button fx:id="btnKıtaId" layoutX="547.0" layoutY="647.0" mnemonicParsing="false" onAction="#btnKıtavaka" text="Kıta Vakaları" />
+        <LineChart fx:id="lineChart" layoutX="710.0" layoutY="196.0" prefHeight="439.0" prefWidth="450.0">
+            <xAxis>
+                <CategoryAxis fx:id="cizgiX" side="BOTTOM" />
+            </xAxis>
+            <yAxis>
+                <NumberAxis fx:id="cizgiY" side="LEFT" />
+            </yAxis>
+        </LineChart>
+        <Button fx:id="btnKıtaOlumId" layoutX="136.0" layoutY="647.0" mnemonicParsing="false" onAction="#btnKıtaOlum" text="Kıta Ölümleri" />
+        <Button fx:id="lineCases" layoutX="1056.0" layoutY="647.0" mnemonicParsing="false" onAction="#lineData" text="Vakalar" />
+        <ChoiceBox fx:id="choiceCountry" layoutX="875.0" layoutY="647.0" prefWidth="150.0" />
+        <StackedBarChart fx:id="barChart" layoutX="14.0" layoutY="139.0" prefHeight="497.0" prefWidth="695.0">
+            <xAxis>
+                <CategoryAxis side="BOTTOM" fx:id="x" />
+            </xAxis>
+            <yAxis>
+                <NumberAxis fx:id="y" side="LEFT" />
+            </yAxis>
+        </StackedBarChart>
+      <Button fx:id="listeBtn" layoutX="789.0" layoutY="647.0" mnemonicParsing="false" onAction="#listeClick" text="Listeyi Al" />
+      <Button layoutX="355.0" layoutY="647.0" mnemonicParsing="false" text="Temizle" fx:id="temizleBtn" onAction="#temizleBtn"/>
+    </children>
+</AnchorPane>
